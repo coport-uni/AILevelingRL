@@ -74,4 +74,8 @@ if __name__ is '__main__':
 
 ```
 ## Result
+<<<<<<< HEAD
 ![[KakaoTalk_20251030_000552484.mp4]]
+=======
+![[KakaoTalk_20251030_000552484.mp4]]
+>>>>>>> 4dcd180287f1a55b3b0bb7c413330bb067658dc8
