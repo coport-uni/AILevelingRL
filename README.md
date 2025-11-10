@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PyArduino 개발
 ## Overview
 * 아두이노 R4를 파이썬으로 제어하면 편리할듯
@@ -11,6 +10,11 @@ conda create -n pyarduino
 conda activate pyarduino
 conda install pip
 pip install telemetrix-uno-r4
+```
+* 11/10 YOLO 업데이트 지원
+```
+conda create -n pyarduino2 python=3.10
+pip install openvino ultralytics telemetrix-uno-r4 torch torchvision
 ```
 ## Code
 ```python title=simple_relay_controller
@@ -158,6 +162,7 @@ if __name__ is '__main__':
 ```
 ## Result
 ![[KakaoTalk_20251030_000552484.mp4]]
+
 
 
 >>>>>>> 889aea2d9e4a65a27b8ad4d884df2dd088c5b590
