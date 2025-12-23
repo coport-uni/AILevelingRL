@@ -6,6 +6,8 @@
 ```bash title=setup 
 # 윈도우 환경에서 진행, git / conda 설치 등 필요함
 # Arduino 포트확인하고 telemetrix 업로드해놓을 것
+# 작업해보니 venv 에서도 잘 됨
+# python -m venv venv
 conda create -n pyarduino
 conda activate pyarduino
 conda install pip
@@ -166,3 +168,4 @@ if __name__ is '__main__':
 
 
 >>>>>>> 889aea2d9e4a65a27b8ad4d884df2dd088c5b590
+
