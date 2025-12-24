@@ -34,10 +34,9 @@ class AILeveling():
         # print(value)
 
 def main():
+    al = AILeveling("minima")
     while True:
-        al = AILeveling("minima")
-        al.run_test()
+        al.run_example()
 
 if __name__ == "__main__":
     main()
-        
