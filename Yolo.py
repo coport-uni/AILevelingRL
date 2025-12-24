@@ -1,16 +1,23 @@
 from ultralytics import YOLO
+import time
 
 # conda create -n pyarduino2 python=3.10
 # pip install openvino ultralytics telemetrix-uno-r4 torch torchvision
 
 class YoloMode():
     def __init__(self):
-        self.model = YOLO("yolo11n.pt")
-        # self.model = YOLO("yolo12n.pt")
+        # self.model = YOLO("yolo11n.pt")
+        self.model = YOLO("yolo12m.pt")
         # self.model = YOLO("yolov13n.pt")
     
     def run_trainer(self):
-        results = self.model.train(data="/workspace/AiLeveling/Dataset0/data.yaml", epochs=300, imgsz=800, batch=100 ,device=[1,2])
+        nano_batch = 100
+        nano_array = [1,2]
+
+        medium_batch = 40
+        medium_array = [0,1,2]
+
+        results = self.model.train(data="/workspace/sungwoo_docker/AILevelingRL/DatasetMK2/data.yaml", epochs=300, imgsz=800, batch=medium_batch ,device=medium_array)
 
     def run_openvino_exporter(self, path):
         self.model = YOLO(path)
@@ -28,11 +35,12 @@ class YoloMode():
 
 def main():
     ym = YoloMode()
+    ym.run_trainer()
     # model_path = "C:\\Users\\USER_55_DESKTOP\\Desktop\\workspace\\AILevelingRL\\models\\13n.pt"
-    model_path = 'C:\\Users\\USER_55_DESKTOP\\Desktop\\workspace\\AILevelingRL\\models\\12n_openvino_model'
+    # model_path = 'C:\\Users\\USER_55_DESKTOP\\Desktop\\workspace\\AILevelingRL\\models\\12n_openvino_model'
     # ym.run_eval(model_path)
     # ym.run_openvino_exporter(model_path)
-    ym.run_openvino_eval(model_path)
+    # ym.run_openvino_eval(model_path)
 
 if __name__ == "__main__":
     main()
