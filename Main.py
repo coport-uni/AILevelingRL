@@ -18,11 +18,11 @@ class AILeveling():
         Input : None
         Output : None
         """
-        pin = 7
-        self.pa.run_digital_write(pin, True)
-        time.sleep(2)
-        self.pa.run_digital_write(pin, False)
-        time.sleep(2)
+        # pin = 13
+        # self.pa.run_digital_write(pin, True)
+        # time.sleep(1)
+        # self.pa.run_digital_write(pin, False)
+        # time.sleep(1)
 
         # for i in range(4):
         #     self.pa.run_digital_write(i+4, True)
@@ -34,9 +34,10 @@ class AILeveling():
         # print(value)
 
 def main():
-    al = AILeveling("minima")
+    al = AILeveling("wifi")
     while True:
         al.run_example()
 
 if __name__ == "__main__":
     main()
+        
