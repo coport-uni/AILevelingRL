@@ -18,6 +18,10 @@ pip install telemetrix-uno-r4
 conda create -n pyarduino2 python=3.10
 pip install openvino ultralytics telemetrix-uno-r4 torch torchvision
 ```
+
+* 01/13 MCP4728 (Pump) 업데이트 지원
+기존 venv 폴더에 PyArduino, venv 파일 복붙할 것
+
 ## Code
 ```python title=simple_relay_controller
 import sys
@@ -87,5 +91,6 @@ if __name__ is '__main__':
 
 
 >>>>>>> 889aea2d9e4a65a27b8ad4d884df2dd088c5b590
+
 
 
